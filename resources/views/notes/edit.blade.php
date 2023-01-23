@@ -28,6 +28,13 @@
                         class="w-full mt-6"
                         :value="@old('text', $note->text)"></x-textarea>
 
+                    <x-textarea
+                        name="author_name"
+                        rows="10"
+                        field="text"
+                        placeholder="Author_name"
+                        class="w-full mt-6"
+                        :value="@old('author_name', $note->author_name)"></x-textarea>
 
                     <x-button class="mt-6">Save Note</x-button>
                 </form>
