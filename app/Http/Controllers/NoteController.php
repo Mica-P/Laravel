@@ -40,13 +40,16 @@ class NoteController extends Controller
     {
         $request->validate([
             'title' => 'required|max:120',
-            'text' => 'required'
+            'text' => 'required',
+            'author_name' => 'required'
+
         ]);
 
         $note = new Note([              //nieuw object aan maken van Note model
             'user_id' => Auth::id(),    //id van de huidige user in user_id zetten
             'title' => $request->title, //title (request) in title zetten
-            'text' => $request->text    //text (request) in text zetten
+            'text' => $request->text,    //text (request) in text zetten
+            'author_name' => $request->author_name
         ]);
         $note->save();                  //het object opslaan en dus de rij opslaan in de tabel
 
@@ -90,12 +93,14 @@ class NoteController extends Controller
     {
         $request->validate([
             'title' => 'required|max:120',
-            'text' => 'required'
+            'text' => 'required',
+            'author_name' => 'required'
         ]);
 
         $note->update([
             'title' => $request->title,
-            'text' => $request->text
+            'text' => $request->text,
+            'author_name' => $request->author_name
         ]);
 
         return to_route('notes.show', $note);

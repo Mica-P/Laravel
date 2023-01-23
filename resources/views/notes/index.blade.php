@@ -19,6 +19,9 @@
                     <span>
                         {{ $note->updated_at->diffForHumans() }}
                     </span>
+                    <span>
+                      <p> {{ $note->author_name }}</p>
+                    </span>
                 </div>
             @endforeach
                 {{ $notes->links() }}

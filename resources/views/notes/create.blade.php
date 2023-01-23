@@ -13,7 +13,7 @@
                     @csrf
                     <x-input type="text" name="title" field="title" placeholder="Title" class="w-full" autocomplete="off"></x-input>
                     <x-textarea name="text" rows="10" field="text" placeholder="Start typing here..." class="w-full mt-6"></x-textarea>
-                    <x-input type="text" name="author_name" field="author_name" placeholder="author_name" class="w-full" autocomplete="off"></x-input>
+                    <x-input type="text" name="author_name" field="text" placeholder="author_name" class="w-full" autocomplete="off"></x-input>
                     <x-button class="mt-6">Save Note</x-button>
                 </form>
 
