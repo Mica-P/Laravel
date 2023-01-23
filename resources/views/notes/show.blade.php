@@ -25,7 +25,9 @@
                 </form>
 
             </div>
-
+            <p class="opacity-70">
+                <strong>Author name: </strong> {{ $note->author_name }}
+            </p>
 
             <div class="my-6 p-6 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
                 <h2 class="font-bold text-4xl">
@@ -34,6 +36,7 @@
                 <p class="mt-6 whitespace-pre-wrap">
                     {{ $note->text }}
                 </p>
+
             </div>
         </div>
     </div>
