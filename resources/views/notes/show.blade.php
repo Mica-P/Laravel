@@ -36,7 +36,6 @@
                 <p class="mt-6 whitespace-pre-wrap">
                     {{ $note->text }}
                 </p>
-
             </div>
         </div>
     </div>
